@@ -1,0 +1,98 @@
+:root {
+  /* -- General Store palette: kraft paper, deep forest ink, mustard + brick accents -- */
+  --paper: #f2ecd9;
+  --paper-2: #e9e0c6;
+  --card: #faf7ec;
+  --ink: #1c2018;
+  --ink-soft: #52584a;
+  --forest: #2f4b3c;
+  --forest-dark: #1f342a;
+  --mustard: #dd9c07;
+  --mustard-dark: #b57e03;
+  --brick: #a8391a;
+  --brick-dark: #8a2e15;
+  --line: #cabf9c;
+  --line-strong: #9c9070;
+  --shadow-tag: 0 6px 0 rgba(28, 32, 24, 0.08);
+
+  --display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  --sans: 'IBM Plex Sans', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+
+  font: 16px/150% var(--sans);
+  color: var(--ink-soft);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(28, 32, 24, 0.05) 1px, transparent 0) 0 0/22px 22px,
+    var(--paper);
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: var(--mustard);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin: 0;
+}
+
+h1 { font-size: 44px; letter-spacing: 0.03em; }
+h2 { font-size: 28px; letter-spacing: 0.02em; }
+h3 { font-size: 20px; letter-spacing: 0.01em; }
+
+p { margin: 0; }
+
+button {
+  font-family: var(--sans);
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+
+/* thin, warm scrollbar to match the paper theme */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--paper-2); }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--forest); }
+
+code {
+  font-family: var(--mono);
+  font-size: 14px;
+  padding: 2px 6px;
+  background: var(--paper-2);
+  border-radius: 4px;
+}
